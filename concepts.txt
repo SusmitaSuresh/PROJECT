@@ -1,0 +1,21 @@
+The concepts used in this assignment are: 
+1) SWING:
+	subconcepts:
+	i. JFrame, JLabel, JTextField, JButton, JComboBox, JOptionPane, JTable
+	ii. DocumentFilter: when input is taken through textfield, the text is stored in a document. we can manipulate that text using document filter. here we have added a limit to number of characters coming in the text field by overriding the replace method
+2) JAVA BASICS:
+	subconcepts:
+	i. interface: provides public abstract method which are overrriden by the class which implements it
+	ii. inheritance: properties of one class can be inherited by the child class that extends it
+	iii. exception handling: if there is an area where abnormal termination of code can happen (it stops that abnormal termination), or any invalid condition arises, we can use exceptions to point it out in console
+	iv. importing: we import classes from packages based on our needs
+3) JDBC: 
+	subconcepts:
+	i. steps to create connection: in the sql connection class, we use following steps to extablish connection: 1.register driver through class.forName(driver), 2.get connection by: con = DriverManager.getConnection(url,username,password), 3.we close the connection and statements through LOGOUT button but we mentioned the function in this class (it is done using .close() function)
+	ii. PreparedStatement, Statement
+	iii. in prepared stataments, column names cannot be a ?, and email (or things with special characters like +-@ ect) must be enclosed by `...`
+	iv. statements are vulnerable to sql injection, i.e user input can be a malicious command (haven't added safety checks in this assignment but will extend)
+	v. ResultSet: executeQuery commands (like select) return a result set which is a set of all data of the sql table which we selected
+	vi. ResultSetMetaData: contains data like column count, row count, column names, column data types etc, basically the basic information of the table
+4) We have used 2 ways to add action listener, one by creating a separate class and overriding the method and by using e->{}
+5) We convert ResultSet rs into array of String using rs.toArray(new String[0]), we can't typecast Object[] into String[] as ClassCastException arises.
